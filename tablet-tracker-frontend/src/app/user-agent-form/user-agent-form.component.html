@@ -1,0 +1,39 @@
+<div class="form-container">
+  <h2>Provide one or multiple User-Agent entries here</h2>
+
+  <form (ngSubmit)="submitUserAgent()">
+    <div class="form-group">
+      <label for="userAgent">User-Agent</label>
+      <textarea
+        id="userAgent"
+        [(ngModel)]="userAgent"
+        name="userAgent"
+        required
+        class="form-control"
+        [disabled]="isSubmitting"
+        rows="6"
+        placeholder="Please enter each User-Agent string on a separate line."
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+      Submit
+    </button>
+  </form>
+
+  <!-- Buttons to get and delete all data -->
+  <div class="button-group mt-3">
+    <button (click)="getAllData()" class="btn btn-info mr-2">Get All Data</button>
+    <button (click)="deleteAllData()" class="btn btn-danger">Delete All Data</button>
+  </div>
+
+  <!-- Show a loading state or message while submitting -->
+  <div *ngIf="isSubmitting" class="loading-indicator">
+    <p>Submitting...</p>
+  </div>
+
+  <!-- Success or error messages -->
+  <div *ngIf="message" class="alert" [ngClass]="{ 'alert-success': !message.includes('Error'), 'alert-danger': message.includes('Error') }">
+    {{ message }}
+  </div>
+</div>

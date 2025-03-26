@@ -1,0 +1,112 @@
+/* Center the form container */
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Textarea styling */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-control:disabled {
+  background-color: #f0f0f0;
+}
+
+/* Button styling */
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+}
+
+/* Button group for Get All Data and Delete All Data */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.button-group .btn {
+  width: 48%; /* Each button takes up 48% width */
+}
+
+.button-group .btn-info {
+  background-color: #17a2b8;
+}
+
+.button-group .btn-info:hover {
+  background-color: #117a8b;
+}
+
+.button-group .btn-danger {
+  background-color: #dc3545;
+}
+
+.button-group .btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Loading indicator */
+.loading-indicator {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Alert messages styling */
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}

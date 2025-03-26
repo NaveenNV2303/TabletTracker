@@ -1,0 +1,18 @@
+<div class="tablet-grid">
+    <div *ngFor="let tablet of devices" class="tablet-card">
+      <div class="tablet-card-content">
+        <!-- Tablet Image -->
+        <div class="tablet-image">
+          <img src="/Tab.png" alt="{{tablet.model}}">
+        </div>
+        <!-- Tablet Specs -->
+        <div class="tablet-specs">
+          <div class="tablet-name">{{tablet.vendor}} {{tablet.model}}</div>
+          <p><strong>OS:</strong> {{tablet.osName}} - Version: {{tablet.osVersion}}</p>
+          <p><strong>Browser:</strong> {{tablet.browserName}} - Version: {{tablet.browserVersion}}</p>
+          <p><strong>Rendering Engine:</strong> {{tablet.browserRenderingEngine}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

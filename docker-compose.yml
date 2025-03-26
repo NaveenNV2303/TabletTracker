@@ -1,0 +1,25 @@
+services:
+  backend:
+    image: tablet-tracker-backend-image
+    container_name: tablet-tracker-backend-container
+    build:
+      context: ./tablet-tracker-backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_URL=jdbc:postgresql://ep-round-base-abtigj8x-pooler.eu-west-2.aws.neon.tech/neondb?sslmode=require
+      - DB_USERNAME=neondb_owner
+      - DB_PASSWORD=npg_koHxf03gBuaG
+      - API_LICENSE_KEY=e6ce0b9455cab0e494be4587d016c7c2
+  frontend:
+    image: tablet-tracker-frontend-image
+    container_name: tablet-tracker-frontend-container
+    build:
+      context: ./tablet-tracker-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: always
